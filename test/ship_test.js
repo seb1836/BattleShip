@@ -95,7 +95,7 @@ console.log("entire test suite completed")
    })
 
   it("should register no damage to a ship if no ships is at the shoot's coordinates", function() {
-    fire([8, 1], player)
+    fire( player,[8, 1])
     expect(player.ships[0].damage).to.be.empty
   })
 
@@ -112,7 +112,7 @@ console.log("entire test suite completed")
       ]
     }
 
-    fire([0, 0], player)
+    fire( player,[0, 0])
     expect(player.ships[0].damage[0]).to.deep.equal([0, 0])
   })
 })

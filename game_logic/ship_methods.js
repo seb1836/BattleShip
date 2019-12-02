@@ -19,7 +19,7 @@ const damageShip = (ship, coordinates) => {
   ship.damage.push(coordinates)
 }
 
-const fire = (coordinates, player) => {
+const fire = (player, coordinates) => {
   const ship = checkForShip(player, coordinates)
   if (ship) {
     damageShip(ship, coordinates)

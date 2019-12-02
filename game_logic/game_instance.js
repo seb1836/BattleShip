@@ -1,4 +1,15 @@
-function checkGameStatus(players) {
+import {fire} from './ship_methods.js'
+
+const checkGameStatus =(players) => {
   return false
 }
-module.exports.checkGameStatus = checkGameStatus
+
+const takeTurn = (opposingPlayer,guessFunction) => {
+let coordinates = guessFunction();
+fire(opposingPlayer, coordinates);
+let gameOver = checkGameStatus();
+
+return gameOver
+}
+module.exports.checkGameStatus = checkGameStatus;
+module.exports.takeTurn = takeTurn
